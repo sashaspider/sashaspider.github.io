@@ -22,21 +22,3 @@ buttons.forEach(button => {
   });
 });
 
-
-var myButton = document.querySelector("button");
-var myHeading = document.querySelector("h1");
-function setUserName() {
-  var myName = prompt("Введите своё имя");
-  localStorage.setItem("name", myName);
-  myHeading.textContent = "BLINN2025 и " + myName; 
-}
-if (!localStorage.getItem("name")) {
-  setUserName();
-} else {
-  var storedName = localStorage.getItem("name");
-  myHeading.textContent = "BLINN2025 и " + storedName;
-}
-myButton.onclick = function () {
-  setUserName();
-};
-
